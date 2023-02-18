@@ -1,0 +1,1044 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Icon_dashboard.png.png">
+  <link rel="icon" href="/img/Icon_dashboard.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Jao">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="参照Markdown相关的书写规范，通过编写统一格式的纯文本文件，得到一篇源文件有较高可读性以及编写性、可维护、语法简单且易于记忆的格式化文档输出。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown书写规范">
+<meta property="og:url" content="http://example.com/2023/02/11/Markdown%E4%B9%A6%E5%86%99%E8%A7%84%E8%8C%83/index.html">
+<meta property="og:site_name" content="Jao的博客">
+<meta property="og:description" content="参照Markdown相关的书写规范，通过编写统一格式的纯文本文件，得到一篇源文件有较高可读性以及编写性、可维护、语法简单且易于记忆的格式化文档输出。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-11T10:39:02.000Z">
+<meta property="article:modified_time" content="2023-02-18T17:45:56.263Z">
+<meta property="article:author" content="Jao">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Markdown书写规范 - Jao的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"TtKmKJ1QJBhjiD5zIHHvnQxl-gzGzoHsz","app_key":"O341jejTaOAUbuAxq6USCENf","server_url":"https://ttkmkj1q.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>myBlog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/background2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Markdown书写规范"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-02-11 18:39" pubdate>
+          2023年2月11日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Markdown书写规范</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2023年2月19日 凌晨
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="Markdown规范"><a href="#Markdown规范" class="headerlink" title="Markdown规范"></a>Markdown规范</h2><ul>
+<li><a href="#markdown%E8%A7%84%E8%8C%83">Markdown规范</a></li>
+<li><a href="#%E4%B8%80%E6%96%87%E6%A1%A3%E5%B8%83%E5%B1%80">一、文档布局</a></li>
+<li><a href="#%E4%BA%8C%E5%AD%97%E7%AC%A6%E8%A1%8C">二、字符行</a></li>
+<li><a href="#%E4%B8%89%E8%A1%8C%E5%B0%BE%E7%A9%BA%E6%A0%BC">三、行尾空格</a></li>
+<li><a href="#%E5%9B%9B%E6%A0%87%E9%A2%98">四、标题</a></li>
+<li><a href="#%E4%BA%94%E5%88%97%E8%A1%A8">五、列表</a></li>
+<li><a href="#%E5%85%AD%E4%BB%A3%E7%A0%81">六、代码</a></li>
+<li><a href="#%E4%B8%83%E9%93%BE%E6%8E%A5">七、链接</a></li>
+<li><a href="#%E5%85%AB%E5%9B%BE%E7%89%87">八、图片</a></li>
+<li><a href="#%E4%B9%9D%E8%A1%A8%E6%A0%BC">九、表格</a></li>
+<li><a href="#%E5%8D%81%E4%BC%98%E5%85%88%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8%E8%80%8C%E9%9D%9E%E8%A1%A8%E6%A0%BC">十、优先使用列表而非表格</a></li>
+<li><a href="#%E5%8D%81%E4%B8%80%E5%A4%9A%E7%94%A8markdown%E5%B0%91%E7%94%A8html">十一、多用Markdown，少用Html</a></li>
+</ul>
+<h2 id="一、文档布局"><a href="#一、文档布局" class="headerlink" title="一、文档布局"></a>一、文档布局</h2><p>一般情况下，文档采用以下的这种布局格式</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># 文档标题</span><br><br>简短介绍<br><br>[TOC]<br><br><span class="hljs-section">## 章节标题</span><br><br>内容<br><br><span class="hljs-section">## 参考</span><br><br><span class="hljs-bullet">*</span> https://link-to-more-info<br></code></pre></td></tr></table></figure>
+
+<ol>
+<li><p><code># 文档标题</code>：第一个标题最好是一级标题，而且最好和文件名相同或者类似。第一个标题通常作用于整个文件。</p>
+<p> 文档标题采用以下的格式:</p>
+ <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section">Markdown 编写规范</span><br><span class="hljs-section">==========================</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code># 简短介绍</code>：用1-3局话对文档的主题做一个概述。把自己假设成一个新手，看到介绍后就了解了这篇文档介绍了什么？为什么要去这么做？  </p>
+</li>
+<li><p><code># [TOC]</code>：如果你使用了目录，可以将目录放在简介的后面。</p>
+</li>
+<li><p><code># 章节标题</code>：剩下的章节标题级别从二级开始。  </p>
+</li>
+<li><p><code>## 参考</code>：将文档参考的相关链接放在底部，方便找到更详细的内容，或者提供当前页面没有但是其他人需要了解的内容。</p>
+</li>
+</ol>
+<h2 id="二、字符行"><a href="#二、字符行" class="headerlink" title="二、字符行"></a>二、字符行</h2><p>尽可能遵从Markdown语法中关于字符行的限制。过长的链接以及表格通常会破坏这些限制。因此通常在长链接前后加入换行符以增加可读性, 让它可以符合字符长度的限制。</p>
+<ul>
+<li><p>中英文混合时，应该采用以下规则：</p>
+<ul>
+<li>英文和数字使用半角字符</li>
+<li>中文文字之间不加空格</li>
+<li>中文文字与英文、阿拉伯数字及 @ # $ % ^ &amp; * . ( ) 等符号之间加空格</li>
+<li>中文标点之间不加空格</li>
+<li>中文标点与前后字符之间不加空格</li>
+<li>如果括号内有中文，则使用中文括号</li>
+<li>如果括号中的内容全部都是英文，则使用半角英文括号</li>
+<li>当半角符号&#x2F;表示[或者]之意时，与前后的字符之间均不加空格</li>
+<li>更多例子参考<a target="_blank" rel="noopener" href="https://github.com/sparanoid/chinese-copywriting-guidelines">中文文案排版指北</a></li>
+</ul>
+</li>
+<li><p>中文符号应该采用以下规则：</p>
+<ul>
+<li>用直角引号（「」）代替双引号（“”），输入方法参考<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/19755746">如何输入直角引号</a></li>
+<li>省略号使用「……」，而「。。。」仅用于表示停顿</li>
+</ul>
+</li>
+<li><p>表达方式应当遵循《The Element Style》:</p>
+<ul>
+<li>使段落成为文章的单元：一个段落只表达一个主题</li>
+<li>通常在每一段落开始要点题，在段落结尾要扣题</li>
+<li>使用主动语态</li>
+<li>陈述句中使用肯定说法</li>
+<li>删除不必要的词</li>
+<li>避免连续使用松散的句子</li>
+<li>使用相同的结构表达并列的意思</li>
+<li>将相关的词放在一起</li>
+<li>将强调的词放在句末</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、行尾空格"><a href="#三、行尾空格" class="headerlink" title="三、行尾空格"></a>三、行尾空格</h2><p>在行尾使用反斜线去代替行尾空格进行换行操作。</p>
+<p>例如：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">这里需要一个换行\<br>下一行<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<p>这里需要一个换行<br>下一行</p>
+</blockquote>
+<p>同时，对于两个段落，或者两部分的内容，通常使用一个空白行来进行隔开。</p>
+<p>章节标题和内容间必须有一个空行。</p>
+<h2 id="四、标题"><a href="#四、标题" class="headerlink" title="四、标题"></a>四、标题</h2><h3 id="采用ATX格式的标题"><a href="#采用ATX格式的标题" class="headerlink" title="采用ATX格式的标题"></a>采用ATX格式的标题</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section">## 二级标题</span><br></code></pre></td></tr></table></figure>
+
+<p>使用 Setext 格式的标题，在标题行下添加 <code>=</code> 或者 <code>-</code> ，这种格式很难维护并且不能很好地去适应标题的语法，同时也很难区分一级标题和二级标题，所以最好尽可能避免地去使用 <code>=</code> 或者 <code>-</code> 作为标题格式。</p>
+<h3 id="在标题的周围都加入空行"><a href="#在标题的周围都加入空行" class="headerlink" title="在标题的周围都加入空行"></a>在标题的周围都加入空行</h3><p>最好在 <code>#</code> 和新行的前面和后面都加入空白行，如果文本太挤的话会使源文件的可读性降低。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs markdown">例1：<br>...上一部分内容<br><br><span class="hljs-section"># 标题</span><br><br>下一部分内容...<br><br><br>例2：<br>...上一部分内容<br><br><span class="hljs-section"># 标题</span><br>下一部分内容...<br></code></pre></td></tr></table></figure>
+
+<p>两个例子的显示效果是一样的，但可以看到，例1的源文件可读性显然高于例2。</p>
+<h2 id="五、列表"><a href="#五、列表" class="headerlink" title="五、列表"></a>五、列表</h2><h3 id="对长列表使用偷懒的有序数字符号"><a href="#对长列表使用偷懒的有序数字符号" class="headerlink" title="对长列表使用偷懒的有序数字符号"></a>对长列表使用偷懒的有序数字符号</h3><p>创建有序列表，要在每个列表项前添加数字并紧跟一个英文句点，空一个空格输入标题的内容。对于这种有序列表，Markdown有一种偷懒的方式，即数字不必按数学顺序排列，但是列表序号应当以数字 1 开始。</p>
+<p>对于可能会修改的长列表，特别是嵌套的长列表，更推荐使用偷懒的有序数字符号</p>
+<p>例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> Foo.<br><span class="hljs-bullet">1.</span> Bar.<br><span class="hljs-bullet">    1.</span> Foofoo.<br><span class="hljs-bullet">    1.</span> Barbar.<br><span class="hljs-bullet">1.</span> Baz.<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<ol>
+<li>Foo.</li>
+<li>Bar.<ol>
+<li>Foofoo.</li>
+<li>Barbar.</li>
+</ol>
+</li>
+<li>Baz.</li>
+</ol>
+</blockquote>
+<p>但是在列表较短并且不太可能改变它的情况下，更推荐使用有序完整的数字符号来增加可读性。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> Foo.<br><span class="hljs-bullet">2.</span> Bar.<br><span class="hljs-bullet">3.</span> Baz.<br></code></pre></td></tr></table></figure>
+
+<h3 id="嵌套列表间距"><a href="#嵌套列表间距" class="headerlink" title="嵌套列表间距"></a>嵌套列表间距</h3><p>在嵌套列表中，使用4个空格对有序列表和无序列表进行缩进</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span>  在列表符号后有两个空格<br><span class="hljs-code">    </span><br><span class="hljs-code">2.  再次空两个格</span><br><span class="hljs-code"></span><br><span class="hljs-bullet">*</span>   星号后有三个空格<br><span class="hljs-code">    下一行的文本前有4个空格缩进</span><br><span class="hljs-code">        1.  在列表符号后有两个空格  </span><br><span class="hljs-code">            对于嵌套列表，下一行的文本前有8个空格缩进</span><br><span class="hljs-code">        2.  可以看到嵌套的结构非常清晰</span><br><span class="hljs-code">*   星号后有三个空格</span><br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<ol>
+<li>在列表符号后有两个空格</li>
+<li>再次空两个格</li>
+</ol>
+<ul>
+<li>星号后有三个空格<br>下一行的文本前有4个空格缩进<br>1. 在列表符号后有两个空格<br>    对于嵌套列表，下一行的文本前有8个空格缩进<br>2. 效果</li>
+<li>星号后有三个空格</li>
+</ul>
+</blockquote>
+<p>当没有嵌套列表时，使用4个空格对换行文本的布局进行统一</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">*</span>   Foo<br><span class="hljs-code">    换行.</span><br><span class="hljs-code"></span><br><span class="hljs-bullet">1.</span>  两个空格<br><span class="hljs-code">    采用4个空格缩进</span><br><span class="hljs-code">2.  再次采用两个空格</span><br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<ul>
+<li>Foo<br> 换行.</li>
+</ul>
+<ol>
+<li>两个空格<br>采用4个空格缩进</li>
+<li>再次采用两个空格缩进</li>
+</ol>
+</blockquote>
+<p>但是，在短列表，只有简单一行且无嵌套布局的情况下，一个空格的间隔就能满足所有的列表格式。</p>
+<p>例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">*</span> Foo<br><span class="hljs-bullet">*</span> Bar<br><span class="hljs-bullet">*</span> Baz<br><br><span class="hljs-bullet">1.</span> Foo<br><span class="hljs-bullet">2.</span> Bar<br></code></pre></td></tr></table></figure>
+
+<h2 id="六、代码"><a href="#六、代码" class="headerlink" title="六、代码"></a>六、代码</h2><h3 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h3><p>`反引号`内标志的内容，Markdown会进行渲染。主要用于短代码和字段名称：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">You&#x27;ll want to run <span class="hljs-code">`really_cool_script.sh arg`</span>.<br><br>Pay attention to the <span class="hljs-code">`foo_bar_whammy`</span> field in that table.<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<p>You’ll want to run <code>really_cool_script.sh arg</code>.</p>
+<p>Pay attention to the <code>foo_bar_whammy</code> field in that table.</p>
+</blockquote>
+<p>使用反引号标记抽象意义的文件名, 而不是具体的文件:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">Be sure to update your `README.md`!<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<p>Be sure to update your <code>README.md</code>!</p>
+</blockquote>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>对于超过一行的代码，使用代码块将它括起来：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">Foo</span>(<span class="hljs-params">self, bar</span>):<br>    self.bar = bar<br></code></pre></td></tr></table></figure>
+
+<h4 id="声明语言"><a href="#声明语言" class="headerlink" title="声明语言"></a>声明语言</h4><p>最好是声明语言类型，这样语法高亮显示，并且方便编辑器对语言猜测。</p>
+<h4 id="有时候使用缩进来代表代码块会更加简洁"><a href="#有时候使用缩进来代表代码块会更加简洁" class="headerlink" title="有时候使用缩进来代表代码块会更加简洁"></a>有时候使用缩进来代表代码块会更加简洁</h4><p>四个空格的缩进会被解释成声明一个代码块，采用这种方式会看起来更清晰且可读性高，但是采用这种方式的话就无法声明语言类型。推荐在编写许多短代码片段的时候使用这种方式。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs markdown">You&#x27;ll need to run:<br><br><span class="hljs-code">    bazel run :thing -- --foo</span><br><span class="hljs-code"></span><br>And then:<br><br><span class="hljs-code">    bazel run :another_thing -- --bar</span><br><span class="hljs-code"></span><br>And again:<br><br><span class="hljs-code">    bazel run :yet_again -- --baz</span><br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<p>You’ll need to run:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">&gt;bazel run :thing -- --foo<br></code></pre></td></tr></table></figure>
+
+<p>And then:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">&gt;bazel run :another_thing -- --bar<br></code></pre></td></tr></table></figure>
+
+<p>And again:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">&gt;bazel run :yet_again -- --baz<br></code></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="转义换行符"><a href="#转义换行符" class="headerlink" title="转义换行符"></a>转义换行符</h4><p>因为大部分的代码片段都会被粘贴到命令行终端中，所以最好避免使用转义换行符。</p>
+<p>在行的末尾加上一个反斜杠会进行换行操作.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-code">```shell</span><br><span class="hljs-code">bazel run :target -- --flag --foo=longlonglonglonglongvalue \</span><br><span class="hljs-code">--bar=anotherlonglonglonglonglonglonglonglonglonglongvalue</span><br><span class="hljs-code">```</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="列表中嵌套程序块"><a href="#列表中嵌套程序块" class="headerlink" title="列表中嵌套程序块"></a>列表中嵌套程序块</h4><p>如果需要在列表中嵌套一个程序块，缩进程序块可以确保列表不被打断：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">*</span>   Bullet.<br><br><span class="hljs-code">    ```c++</span><br><span class="hljs-code">    int foo;</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>Next bullet.<figure class="highlight node-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs node-repl"><br>效果：<br><br>&gt;- Bullet.<br><span class="hljs-meta prompt_">&gt;</span><br><span class="hljs-meta prompt_">&gt;</span> <span class="language-javascript">   <span class="hljs-string">``</span><span class="hljs-string">`c++</span></span><br><span class="hljs-meta prompt_">&gt;</span> <span class="language-javascript"><span class="hljs-string">   int foo;</span></span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>Next bullet.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p>同样你也可以通过4个空格来创建一个代码块，只需要在列表所今后添加四个空格即可：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">*</span>   Bullet.<br><br><span class="hljs-code">        int foo;</span><br><span class="hljs-code"></span><br><span class="hljs-bullet">*</span>   Next bullet.<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<ul>
+<li>Bullet.</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">&gt;int foo;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>Next bullet.</li>
+</ul>
+</blockquote>
+<h2 id="七、链接"><a href="#七、链接" class="headerlink" title="七、链接"></a>七、链接</h2><p>太长的链接会使markdown文件可读性变差，同时也破坏了每行80个字符的限制。所以尽可能地去缩短链接的长度。</p>
+<h3 id="使用含有丰富信息的markdown链接标题"><a href="#使用含有丰富信息的markdown链接标题" class="headerlink" title="使用含有丰富信息的markdown链接标题"></a>使用含有丰富信息的markdown链接标题</h3><p>Markdown的链接语法允许你像Html一样，设置一个带有超链接的标题。</p>
+<p>但是在读者快速浏览你的文档时，”link” 或者”here” 这种没有信息含量的标题，并不会给读者提供任何信息且浪费空间</p>
+<p>例：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">See the syntax guide for more info: [<span class="hljs-string">link</span>](<span class="hljs-link">syntax_guide.md</span>).<br>Or, check out the style guide [<span class="hljs-string">here</span>](<span class="hljs-link">style_guide.md</span>).<br>DO NOT DO THIS.<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<p>See the syntax guide for more info: <a href="syntax_guide.md">link</a>.<br>Or, check out the style guide <a href="style_guide.md">here</a>.<br>DO NOT DO THIS.</p>
+</blockquote>
+<p>一般人也看不懂你这个是什么链接。相反，要在链接的括号内包含这个链接的描述</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">See the [<span class="hljs-string">syntax guide</span>](<span class="hljs-link">syntax_guide.md</span>) for more info.<br>Or, check out the [<span class="hljs-string">style guide</span>](<span class="hljs-link">style_guide.md</span>).<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<p>See the <a href="syntax_guide.md">syntax guide</a> for more info.<br>Or, check out the <a href="style_guide.md">style guide</a>.</p>
+</blockquote>
+<h2 id="八、图片"><a href="#八、图片" class="headerlink" title="八、图片"></a>八、图片</h2><p>少用图片，并且最好采用截图的方式，多用文本的方式来展现内容，最好只在你觉得只有图片能更好表达你想展示的意思时才采用图片</p>
+<h2 id="九、表格"><a href="#九、表格" class="headerlink" title="九、表格"></a>九、表格</h2><p>表格的写法应该参考 <a target="_blank" rel="noopener" href="https://docs.github.com/en/get-started/writing-on-github">GFM</a>，如下所示</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs markdown">First Header  | Second Header<br>------------- | -------------<br>Content Cell  | Content Cell<br>Content Cell  | Content Cell<br><br>| Left-Aligned  | Center Aligned  | Right Aligned |<br>| :------------ |:---------------:| -----:|<br>| col 3 is      | some wordy text | $1600 |<br>| col 2 is      | centered        |   $12 |<br>| zebra stripes | are neat        |    $1 |<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Left-Aligned</th>
+<th align="center">Center Aligned</th>
+<th align="right">Right Aligned</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">col 3 is</td>
+<td align="center">some wordy text</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td align="left">col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td align="left">zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h2 id="十、优先使用列表而非表格"><a href="#十、优先使用列表而非表格" class="headerlink" title="十、优先使用列表而非表格"></a>十、优先使用列表而非表格</h2><p>最好只在你的文档里使用小的表格，大且复杂的表格会在源文件里非常难阅读，同时也会在 后期维护的时候十分困难</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown">Fruit | Attribute | Notes<br>--- | --- | --- <br>Apple | [<span class="hljs-string">Juicy</span>](<span class="hljs-link">https://example.com/SomeReallyReallyReallyReallyReallyReallyReallyReallyLongQuery</span>), Firm, Sweet | Apples keep doctors away.<br>Banana | [<span class="hljs-string">Convenient</span>](<span class="hljs-link">https://example.com/SomeDifferentReallyReallyReallyReallyReallyReallyReallyReallyLongQuery</span>), Soft, Sweet | Contrary to popular belief, most apes prefer mangoes.<br><br>DO NOT DO THIS<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>Fruit</th>
+<th>Attribute</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Apple</td>
+<td><a href="https://example.com/SomeReallyReallyReallyReallyReallyReallyReallyReallyLongQuery">Juicy</a>, Firm, Sweet</td>
+<td>Apples keep doctors away.</td>
+</tr>
+<tr>
+<td>Banana</td>
+<td><a href="https://example.com/SomeDifferentReallyReallyReallyReallyReallyReallyReallyReallyLongQuery">Convenient</a>, Soft, Sweet</td>
+<td>Contrary to popular belief, most apes prefer mangoes.</td>
+</tr>
+</tbody></table>
+</blockquote>
+<p>列表和紧凑一点的子标题也可以展示同样的信息，而且更容易进行编辑修改。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section">## Fruits</span><br><br><span class="hljs-section">### Apple</span><br><br><span class="hljs-bullet">*</span> [<span class="hljs-string">Juicy</span>](<span class="hljs-link">https://SomeReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongURL</span>)<br><span class="hljs-bullet">*</span> Firm<br><span class="hljs-bullet">*</span> Sweet<br><br>Apples keep doctors away.<br><br><span class="hljs-section">### Banana</span><br><br><span class="hljs-bullet">*</span> [<span class="hljs-string">Convenient</span>](<span class="hljs-link">https://example.com/SomeDifferentReallyReallyReallyReallyReallyReallyReallyReallyLongQuery</span>)<br><span class="hljs-bullet">*</span> Soft<br><span class="hljs-bullet">*</span> Sweet<br><br>Contrary to popular belief, most apes prefer mangoes.<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<h2 id="Fruits"><a href="#Fruits" class="headerlink" title="Fruits"></a>Fruits<!-- omit in toc --></h2><h3 id="Apple"><a href="#Apple" class="headerlink" title="Apple"></a>Apple</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://somereallyreallyreallyreallyreallyreallyreallyreallyreallyreallyreallyreallyreallyreallyreallyreallylongurl/">Juicy</a></li>
+<li>Firm</li>
+<li>Sweet</li>
+</ul>
+<p>Apples keep doctors away.</p>
+<h3 id="Banana"><a href="#Banana" class="headerlink" title="Banana"></a>Banana</h3><ul>
+<li><a href="https://example.com/%3ESomeDifferentReallyReallyReallyReallyReallyReallyReallyReallyLongQuery">Convenient</a></li>
+<li>Soft</li>
+<li>Sweet</li>
+</ul>
+<p>Contrary to popular belief, most apes prefer mangoes.</p>
+</blockquote>
+<p>有时候也会需要一个小的表格</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">Transport | Favored by | Advantages<br>--- | --- | ---<br>Swallow | Coconuts | Otherwise unladen<br>Bicycle | Miss Gulch | Weatherproof<br>X-34 landspeeder | Whiny farmboys | Cheap since the X-38 came out<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>Transport</th>
+<th>Favored by</th>
+<th>Advantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Swallow</td>
+<td>Coconuts</td>
+<td>Otherwise unladen</td>
+</tr>
+<tr>
+<td>Bicycle</td>
+<td>Miss Gulch</td>
+<td>Weatherproof</td>
+</tr>
+<tr>
+<td>X-34 landspeeder</td>
+<td>Whiny farmboys</td>
+<td>Cheap since the X-38 came out</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h2 id="十一、多用Markdown，少用Html"><a href="#十一、多用Markdown，少用Html" class="headerlink" title="十一、多用Markdown，少用Html"></a>十一、多用Markdown，少用Html</h2><p>尽可能地多使用markwodn的语法，减少Html语法的入侵。如果Markdown不能实现你想要的, 重新考虑这部分内容你是否需要它。Markwodn几乎能完成除了大型表格之外的所有需求。</p>
+<p>任何一点的Html以及Javascript 元素，都会减少文档的可阅读性和可移植性。因为你不确定你所使用的Markwodn工具会将这些元素以源文件的方式显示还是以渲染后的效果进行显示。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Markdown书写规范</div>
+      <div>http://example.com/2023/02/11/Markdown书写规范/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Jao</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年2月11日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/02/12/Markdown%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/" title="Markdownlint规则">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Markdownlint规则</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/02/09/hexo-build/" title="Hexo搭建博客教程">
+                        <span class="hidden-mobile">Hexo搭建博客教程</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"TtKmKJ1QJBhjiD5zIHHvnQxl-gzGzoHsz","appKey":"O341jejTaOAUbuAxq6USCENf","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
