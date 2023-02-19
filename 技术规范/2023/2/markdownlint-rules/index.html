@@ -19,7 +19,7 @@
     <meta name="description" content="Markdownlint是一个检查Markdown文件中存在的问题的工具，本文对Markdownlint的语法提示进行介绍，借助本文能更好地编写一篇优秀的Markdown文档。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdownlint规则">
-<meta property="og:url" content="http://example.com/2023/02/12/Markdown%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/index.html">
+<meta property="og:url" content="http://jaoyoo.github.io/%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83/2023/2/markdownlint-rules/index.html">
 <meta property="og:site_name" content="Jao的博客">
 <meta property="og:description" content="Markdownlint是一个检查Markdown文件中存在的问题的工具，本文对Markdownlint的语法提示进行介绍，借助本文能更好地编写一篇优秀的Markdown文档。">
 <meta property="og:locale" content="zh_CN">
@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://example.com/image">
 <meta property="og:image" content="https://example.com/image">
 <meta property="article:published_time" content="2023-02-12T01:53:34.000Z">
-<meta property="article:modified_time" content="2023-02-16T16:54:58.775Z">
+<meta property="article:modified_time" content="2023-02-19T05:19:30.797Z">
 <meta property="article:author" content="Jao">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://example.com/image">
@@ -72,7 +72,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"TtKmKJ1QJBhjiD5zIHHvnQxl-gzGzoHsz","app_key":"O341jejTaOAUbuAxq6USCENf","server_url":"https://ttkmkj1q.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"jaoyoo.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"TtKmKJ1QJBhjiD5zIHHvnQxl-gzGzoHsz","app_key":"O341jejTaOAUbuAxq6USCENf","server_url":"https://ttkmkj1q.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -302,7 +302,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年2月17日 凌晨
+                    本文最后更新于：2023年2月19日 下午
                   
                 
               </p>
@@ -531,7 +531,7 @@
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs markdown">Full: [<span class="hljs-string">text</span>][<span class="hljs-symbol">label</span>]<br>Collapsed: [<span class="hljs-string">label</span>][<span class="hljs-symbol"></span>]<br>Shortcut: [label]<br><br>Full: ![<span class="hljs-string">text</span>][<span class="hljs-symbol">image</span>]<br>Collapsed: ![<span class="hljs-string">image</span>][<span class="hljs-symbol"></span>]<br>Shortcut: ![image]<br><br>[<span class="hljs-symbol">label</span>]: <span class="hljs-link">https://example.com/label</span><br>[<span class="hljs-symbol">image</span>]: <span class="hljs-link">https://example.com/image</span><br></code></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p>Full: <a href="https://example.com/label">text</a><br>Collapsed: <a href="https://example.com/label">label</a><br>Shortcut: <a href="https://example.com/label">label</a>  </p>
+<p>Full: <a target="_blank" rel="noopener" href="https://example.com/label">text</a><br>Collapsed: <a target="_blank" rel="noopener" href="https://example.com/label">label</a><br>Shortcut: <a target="_blank" rel="noopener" href="https://example.com/label">label</a>  </p>
 <p>Full: <img src="https://example.com/image" srcset="/img/loading.gif" lazyload alt="text"><br>Collapsed: <img src="https://example.com/image" srcset="/img/loading.gif" lazyload alt="image"><br>Shortcut: <img src="https://example.com/image" srcset="/img/loading.gif" lazyload alt="image">  </p>
 <h3 id="MD053"><a href="#MD053" class="headerlink" title="MD053"></a>MD053</h3><ul>
 <li><p>Link and image reference definitions should be needed<br>Markdown中的链接和图片可以在使用时提供链接目的地或图片来源，也可以在其他地方定义它，并使用标签来参考。参考格式便于保持段落文本不受干扰，也便于在多个地方重复使用同一个URL。</p>
@@ -548,6 +548,27 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83/" class="category-chain-item">技术规范</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
 </div>
 
@@ -558,7 +579,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Markdownlint规则</div>
-      <div>http://example.com/2023/02/12/Markdown常见错误/</div>
+      <div>http://jaoyoo.github.io/技术规范/2023/2/markdownlint-rules/</div>
     </div>
     <div class="license-meta">
       
@@ -606,7 +627,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/11/Markdown%E4%B9%A6%E5%86%99%E8%A7%84%E8%8C%83/" title="Markdown书写规范">
+                      <a href="/technology-notes/2023/2/markdown-standard/" title="Markdown书写规范">
                         <span class="hidden-mobile">Markdown书写规范</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
