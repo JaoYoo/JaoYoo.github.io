@@ -198,11 +198,11 @@ excerpt: 参照Markdown相关的书写规范，通过编写统一格式的纯文
 >1. 在列表符号后有两个空格
 >2. 再次空两个格
 >
->- 星号后有三个空格
->   下一行的文本前有4个空格缩进
->       1. 在列表符号后有两个空格  
->           对于嵌套列表，下一行的文本前有8个空格缩进
->       2. 效果
+>- 星号后有三个空格  
+>   下一行的文本前有4个空格缩进  
+>        1. 在列表符号后有两个空格  
+>           对于嵌套列表，下一行的文本前有8个空格缩进  
+>        2. 可以看到嵌套的结构非常清晰
 >- 星号后有三个空格
 
 当没有嵌套列表时，使用4个空格对换行文本的布局进行统一
@@ -299,23 +299,23 @@ And again:
 
 效果：
 
->You'll need to run:
+> You'll need to run:
 >
->```text
->bazel run :thing -- --foo
->```
+> ```text
+> bazel run :thing -- --foo
+> ```
 >
->And then:
+> And then:
 >
->```text
->bazel run :another_thing -- --bar
->```
+> ```text
+> bazel run :another_thing -- --bar
+> ```
 >
->And again:
+> And again:
 >
->```text
->bazel run :yet_again -- --baz
->```
+> ```text
+> bazel run :yet_again -- --baz
+> ```
 
 #### 转义换行符
 
@@ -334,7 +334,7 @@ bazel run :target -- --flag --foo=longlonglonglonglongvalue \
 
 如果需要在列表中嵌套一个程序块，缩进程序块可以确保列表不被打断：
 
-```markdown
+````markdown
 *   Bullet.
 
     ```c++
@@ -342,7 +342,7 @@ bazel run :target -- --flag --foo=longlonglonglonglongvalue \
     ```
 
 *   Next bullet.
-```
+````
 
 效果：
 
@@ -366,13 +366,13 @@ bazel run :target -- --flag --foo=longlonglonglonglongvalue \
 
 效果：
 
->- Bullet.
+> - Bullet.
 >
->```text
->int foo;
->```
+> ```text
+> int foo;
+> ```
 >
->- Next bullet.
+> - Next bullet.
 
 ## 七、链接
 
