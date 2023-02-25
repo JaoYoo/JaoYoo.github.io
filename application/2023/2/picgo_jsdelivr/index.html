@@ -16,21 +16,28 @@
   <meta name="author" content="Jao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Linux cat以及less命令的语法高亮配置">
+    <meta name="description" content="图床是一个在网络上存储图片的地方，通过URL就可以对图片进行查看，目的是为了节省本地服务器空间，加快图片的打开速度，以及解决跨平台的图片存储问题。本文利用Github+Pingo创建一个免费的图床，将图片转为一个URL并且可以嵌入到Markdown文档中，更方便地在Markdown中插入图片。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux cat以及less命令的语法高亮配置">
-<meta property="og:url" content="http://jaoyoo.github.io/linux-config/2023/2/ccat_less/index.html">
+<meta property="og:title" content="利用Github+PicGo+jsDelivr+Imagine创建免费的图床">
+<meta property="og:url" content="http://jaoyoo.github.io/application/2023/2/picgo_jsdelivr/index.html">
 <meta property="og:site_name" content="Jao的博客">
-<meta property="og:description" content="Linux cat以及less命令的语法高亮配置">
+<meta property="og:description" content="图床是一个在网络上存储图片的地方，通过URL就可以对图片进行查看，目的是为了节省本地服务器空间，加快图片的打开速度，以及解决跨平台的图片存储问题。本文利用Github+Pingo创建一个免费的图床，将图片转为一个URL并且可以嵌入到Markdown文档中，更方便地在Markdown中插入图片。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-20T15:01:02.000Z">
-<meta property="article:modified_time" content="2023-02-20T16:01:42.676Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/%E8%BF%9B%E5%85%A5%E5%BC%80%E5%8F%91%E8%80%85%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/token1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/token2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/picgo.png">
+<meta property="article:published_time" content="2023-02-24T16:06:01.000Z">
+<meta property="article:modified_time" content="2023-02-24T17:13:48.006Z">
 <meta property="article:author" content="Jao">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93.png">
   
   
   
-  <title>Linux cat以及less命令的语法高亮配置 - Jao的博客</title>
+  <title>利用Github+PicGo+jsDelivr+Imagine创建免费的图床 - Jao的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +220,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Linux cat以及less命令的语法高亮配置"></span>
+            <span id="subtitle" data-typed-text="利用Github+PicGo+jsDelivr+Imagine创建免费的图床"></span>
           
         </div>
 
@@ -224,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-20 23:01" pubdate>
-          2023年2月20日 晚上
+        <time datetime="2023-02-25 00:06" pubdate>
+          2023年2月25日 凌晨
         </time>
       </span>
     
@@ -236,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          1.2k 字
         
       </span>
     
@@ -247,7 +254,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -293,12 +300,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Linux cat以及less命令的语法高亮配置</h1>
+            <h1 style="display: none">利用Github+PicGo+jsDelivr+Imagine创建免费的图床</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年2月21日 凌晨
+                    本文最后更新于：2023年2月25日 凌晨
                   
                 
               </p>
@@ -307,35 +314,61 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>在Linux命令行下，要想方便地查看文件内容，通常会使用以下命令：cat、more、less、tail、head<br>然而，这几个命令的输出都不带有任何颜色标记<br>即使用这几个命令查看代码文件时，没有语法高亮显示<br>下面就来介绍一下如何将这几个命令的输出设置成语法高亮</p>
+<p>图床是一个在网络上存储图片的地方，通过URL就可以对图片进行查看，目的是为了节省本地服务器空间，加快图片的打开速度，以及解决跨平台的图片存储问题。本文利用Github+Pingo创建一个免费的图床，将图片转为一个URL并且可以嵌入到Markdown文档中，更方便地在Markdown中插入图片。</p>
 </blockquote>
-<h2 id="1、ccat"><a href="#1、ccat" class="headerlink" title="1、ccat"></a>1、ccat</h2><p>cat命令来源于英语单词concatenate的缩写，主要用于查看文件内容，适合查看内容较少、纯文本的文件。<br>cat命令同时也可以将多个文件的内容进行连接并打印到标准输出。<br>它是一个非常常用的命令。  </p>
-<p>ccat则是一个功能类似于cat的命令，不同点在于对于输出内容，ccat会进行语法高亮<br>对于显示代码文件时，语法高亮会更加容易阅读  </p>
-<p>在Ubuntu下，ccat可以采用以下的方法安装</p>
-<ol>
-<li>进入到<code>下载</code>或<code>Downloads</code>目录</li>
-<li>使用以下命令下载ccat源码归档压缩包<br> <code>wget https://github.com/jingweno/ccat/releases/download/v1.1.0/linux-amd64-1.1.0.tar.gz</code></li>
-<li>解压下载的压缩包<br> <code>tar xfz linux-amd64-1.1.0.tar.gz</code></li>
-<li>将ccat执行文件复制到系统$PATH中，这样在输入ccat时就可以直接使用<br> <code>sudo cp linux-amd64-1.1.0/ccat /usr/local/bin/</code></li>
-<li>给ccat命令添加可执行权限<br> <code>sudo chmod +x /usr/local/bin/ccat</code></li>
-<li>安装完成，输入<code>ccat &lt;文件名&gt;</code>就可以看到带语法高亮的文档输出</li>
+<h2 id="一、平台选择"><a href="#一、平台选择" class="headerlink" title="一、平台选择"></a>一、平台选择</h2><ul>
+<li>Github：利用Github的仓库存储功能，实现图片的存放</li>
+<li>PicGo：一个用于快速上传图片并获取图片URL链接的工具</li>
+<li>jsDelivr：一款开源的免费公共CDN，利用它加速对Github仓库中图片资源的访问</li>
+<li>Imagine：一个用于压缩PNG以及JPEG的桌面端程序，可以压缩图片的体积，加快访问速度</li>
+</ul>
+<h2 id="二、Github图库的创建"><a href="#二、Github图库的创建" class="headerlink" title="二、Github图库的创建"></a>二、Github图库的创建</h2><ol>
+<li>在GitHub中新建一个仓库</li>
+<li>在新建仓库页面中输入仓库名，将仓库权限选择为公开，并且初始化一个README.md文件</li>
+<li>完成仓库的新建</li>
+<li>进入到个人GitHub的设置界面</li>
+<li>在左侧栏中往下拉，选择<code>Developer settings</code>选项</li>
+<li>在左侧栏中依次选择<code>Personal access tokens</code> &gt; <code>Tokens(classic)</code></li>
+<li>点击<code>Generate new token</code> &gt; <code>Generate new token(classic)</code></li>
+<li>在<code>Note</code>栏中输入这个Token的别名（例：cdn）</li>
+<li>勾选<code>Select scopes</code>中的<code>repo</code></li>
+<li>拉到页面底部点击<code>Generate token</code>完成token的创建</li>
+<li>获得token密钥，<strong>注意：这个token只会选择一次，请注意复制保存，或者不要关闭该网页直到PicGo配置完成</strong></li>
 </ol>
-<p>如果你想将系统默认的cat命令替换为ccat的话，可以采使用alias别名设置：</p>
-<ol>
-<li>打开系统配置文件<br> <code>sudo vim ~/.bashrc</code></li>
-<li>在最后一行输入<br> <code>alias cat=/usr/local/bin/ccat</code></li>
-<li>使.bashrc生效<br> <code>source ~/.bashrc</code></li>
+<blockquote>
+<p>token是一个GitHub将权限授予给第三方工具的身份验证密钥</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93.png" srcset="/img/loading.gif" lazyload alt="新建仓库" title="新建仓库"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/%E8%AE%BE%E7%BD%AE.png" srcset="/img/loading.gif" lazyload alt="进入设置界面" title="进入设置界面"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/%E8%BF%9B%E5%85%A5%E5%BC%80%E5%8F%91%E8%80%85%E8%AE%BE%E7%BD%AE.png" srcset="/img/loading.gif" lazyload alt="开发者设置" title="开发者设置"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/token1.png" srcset="/img/loading.gif" lazyload alt="新建token" title="新建token"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/token2.png" srcset="/img/loading.gif" lazyload alt="token配置" title="token配置"></p>
+<h2 id="三、PicGo配置"><a href="#三、PicGo配置" class="headerlink" title="三、PicGo配置"></a>三、PicGo配置</h2><ol>
+<li>在<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/picgo/releases">PicGo</a>发布页下载安装包，安装</li>
+<li>打开PicGo，在左侧栏找到<code>图床设置</code> &gt; <code>Github</code></li>
+<li>按照提示进行Github信息的填写</li>
+<li>点击<code>确认</code>以及<code>设为默认图床</code>按钮</li>
 </ol>
-<p>这样输入<code>cat</code>命令时就默认使用<code>ccat</code>可执行文件了</p>
-<h2 id="2、less"><a href="#2、less" class="headerlink" title="2、less"></a>2、less</h2><ol>
-<li><p>安装source-highlight<br> <code>sudo apt-get install source-highlight</code></p>
-</li>
-<li><p>配置less<br> 打开<code>.bashrc</code>文件，加上以下配置<br> <code>export LESSOPEN=&quot;| /usr/share/source-highlight/src-hilite-lesspipe.sh %s&quot;</code><br> <code>export LESS=&quot; -R&quot;</code></p>
-</li>
-<li><p>如果想输出的内容带有行号的话，添加以下配置<br> <code>export LESS=&quot; -N -R&quot;</code></p>
-</li>
-<li><p>使配置生效<br> <code>source ~/.bashrc</code></p>
-</li>
+<ul>
+<li>设定仓库名：按照用户名&#x2F;图床仓库名的格式填写</li>
+<li>设定分支名：maste，有些仓库默认主分支名可能为main，进入图床仓库页面查看</li>
+<li>设定token：粘贴在GitHub中生成的Token</li>
+<li>设定存储路径：存储图片的路径，例如<code>img/</code>，会在仓库根目录下创建一个img的文件夹并存放图片</li>
+<li>设定自定义域名：输入<code>https://cdn.jsdelivr.net/gh/用户名/图床仓库名</code>，以后上传的图片都会按照这个格式生成访问链接，并通过jsDelive进行加速图片访问</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/picgo.png" srcset="/img/loading.gif" lazyload alt="PicGo配置" title="PinGo Github配置"></p>
+<h2 id="四、imagine图片压缩"><a href="#四、imagine图片压缩" class="headerlink" title="四、imagine图片压缩"></a>四、imagine图片压缩</h2><ol>
+<li>在<a target="_blank" rel="noopener" href="https://github.com/meowtec/Imagine/releases">imagine</a>中下载</li>
+<li>将图片拉进imagine里</li>
+<li>图片下方进度条可以调节压缩率（一般默认即可）</li>
+<li>在imagine窗口内点击图片左上角的保存按钮</li>
+<li>完成图片的压缩</li>
+</ol>
+<h2 id="五、上传图片到图床"><a href="#五、上传图片到图床" class="headerlink" title="五、上传图片到图床"></a>五、上传图片到图床</h2><ol>
+<li>打开PicGo软解，左侧选择上传区</li>
+<li>将图片拉进PicGo上传框界面</li>
+<li>上传成功后，默认会自动复制Markdown的插入图片格式</li>
+<li>粘贴到Markdown文档中即可</li>
 </ol>
 
                 
@@ -355,7 +388,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/linux-config/" class="category-chain-item">Linux配置</a>
+  <a href="/categories/application/" class="category-chain-item">应用记录</a>
   
   
 
@@ -375,8 +408,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Linux cat以及less命令的语法高亮配置</div>
-      <div>http://jaoyoo.github.io/linux-config/2023/2/ccat_less/</div>
+      <div>利用Github+PicGo+jsDelivr+Imagine创建免费的图床</div>
+      <div>http://jaoyoo.github.io/application/2023/2/picgo_jsdelivr/</div>
     </div>
     <div class="license-meta">
       
@@ -388,7 +421,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月20日</div>
+          <div>2023年2月25日</div>
         </div>
       
       
@@ -420,9 +453,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/application/2023/2/picgo_jsdelivr/" title="利用Github+PicGo+jsDelivr+Imagine创建免费的图床">
+                      <a href="/application/2023/2/powershell_proxy/" title="powershell7设置代理">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">利用Github+PicGo+jsDelivr+Imagine创建免费的图床</span>
+                        <span class="hidden-mobile">powershell7设置代理</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -430,8 +463,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/technology-notes/2023/2/markdownlint-rules/" title="Markdownlint规则">
-                        <span class="hidden-mobile">Markdownlint规则</span>
+                      <a href="/linux-config/2023/2/ccat_less/" title="Linux cat以及less命令的语法高亮配置">
+                        <span class="hidden-mobile">Linux cat以及less命令的语法高亮配置</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

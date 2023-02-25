@@ -16,21 +16,24 @@
   <meta name="author" content="Jao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Linux cat以及less命令的语法高亮配置">
+    <meta name="description" content="设置powershell7终端的流量走代理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux cat以及less命令的语法高亮配置">
-<meta property="og:url" content="http://jaoyoo.github.io/linux-config/2023/2/ccat_less/index.html">
+<meta property="og:title" content="powershell7设置代理">
+<meta property="og:url" content="http://jaoyoo.github.io/application/2023/2/powershell_proxy/index.html">
 <meta property="og:site_name" content="Jao的博客">
-<meta property="og:description" content="Linux cat以及less命令的语法高亮配置">
+<meta property="og:description" content="设置powershell7终端的流量走代理">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-20T15:01:02.000Z">
-<meta property="article:modified_time" content="2023-02-20T16:01:42.676Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/clash.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/v2ray.png">
+<meta property="article:published_time" content="2023-02-25T05:47:00.000Z">
+<meta property="article:modified_time" content="2023-02-25T07:02:05.646Z">
 <meta property="article:author" content="Jao">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/clash.png">
   
   
   
-  <title>Linux cat以及less命令的语法高亮配置 - Jao的博客</title>
+  <title>powershell7设置代理 - Jao的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +216,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Linux cat以及less命令的语法高亮配置"></span>
+            <span id="subtitle" data-typed-text="powershell7设置代理"></span>
           
         </div>
 
@@ -224,8 +227,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-20 23:01" pubdate>
-          2023年2月20日 晚上
+        <time datetime="2023-02-25 13:47" pubdate>
+          2023年2月25日 下午
         </time>
       </span>
     
@@ -236,7 +239,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          1.4k 字
         
       </span>
     
@@ -247,7 +250,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -293,12 +296,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Linux cat以及less命令的语法高亮配置</h1>
+            <h1 style="display: none">powershell7设置代理</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年2月21日 凌晨
+                    本文最后更新于：2023年2月25日 下午
                   
                 
               </p>
@@ -307,36 +310,56 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>在Linux命令行下，要想方便地查看文件内容，通常会使用以下命令：cat、more、less、tail、head<br>然而，这几个命令的输出都不带有任何颜色标记<br>即使用这几个命令查看代码文件时，没有语法高亮显示<br>下面就来介绍一下如何将这几个命令的输出设置成语法高亮</p>
+<p>作为程序员，都会有一个工具来对外网资源的加速访问。但是在powershell终端中进行外网资源访问时，常常会发生一些问题。因为一般的代理工具都是Web代理，即使开了全局模式，终端也无法使用，需要单独进行一些配置。</p>
 </blockquote>
-<h2 id="1、ccat"><a href="#1、ccat" class="headerlink" title="1、ccat"></a>1、ccat</h2><p>cat命令来源于英语单词concatenate的缩写，主要用于查看文件内容，适合查看内容较少、纯文本的文件。<br>cat命令同时也可以将多个文件的内容进行连接并打印到标准输出。<br>它是一个非常常用的命令。  </p>
-<p>ccat则是一个功能类似于cat的命令，不同点在于对于输出内容，ccat会进行语法高亮<br>对于显示代码文件时，语法高亮会更加容易阅读  </p>
-<p>在Ubuntu下，ccat可以采用以下的方法安装</p>
+<h2 id="powershell设置代理"><a href="#powershell设置代理" class="headerlink" title="powershell设置代理"></a>powershell设置代理</h2><p>首先，打开你的代理工具程序，查看你的代理工具端口</p>
+<p>我用的是clash，点击右侧的常规就可以在中间面板看到端口号了。例如我的端口号是7890.<br><em>点击clash端口旁面的terminal终端图标可以一键进行配置，不过本文主要介绍使用命令的配置方法。</em></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/clash.png" srcset="/img/loading.gif" lazyload alt="clash"></p>
+<p>v2ray的端口号通过点击顶部的设置，或者直接查看底部状态栏查看</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JaoYoo/cdn/img/v2ray.png" srcset="/img/loading.gif" lazyload alt="v2ray"></p>
+<p>以管理员模式打开powershell7终端，输入命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$</span><span class="language-bash">Env:http_proxy=<span class="hljs-string">&quot;http://127.0.0.1:7890&quot;</span></span><br><span class="hljs-meta prompt_">$</span><span class="language-bash">Env:https_proxy=<span class="hljs-string">&quot;http://127.0.0.1:7890&quot;</span></span><br></code></pre></td></tr></table></figure>
+
+<p>注意，7890是你代理软件里的端口号</p>
+<p>接下来，输入以下命令来测试你的代理连接情况</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -I https://www.google.com<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><em>为什么使用curl测试代理而不使用ping命令呢？因为ping使用的是ICMP协议，属于TCP&#x2F;IP协议，而代理通常用的是HTTP或Socks协议</em></p>
+</blockquote>
+<p>返回以下的提示，则代表powershell的代理配置成功</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">HTTP/1.1 200 Connection established<br><br>HTTP/1.1 200 OK<br></code></pre></td></tr></table></figure>
+
+<h2 id="清除代理"><a href="#清除代理" class="headerlink" title="清除代理"></a>清除代理</h2><p>powershell终端输入以下命令清除代理的配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$</span><span class="language-bash">Env:http_proxy=<span class="hljs-string">&quot;&quot;</span></span><br><span class="hljs-meta prompt_">$</span><span class="language-bash">Env:https_proxy=<span class="hljs-string">&quot;&quot;</span></span><br></code></pre></td></tr></table></figure>
+
+<h2 id="注意"><a href="#注意" class="headerlink" title="!!!注意"></a>!!!注意</h2><p>以上的配置方法只针对本终端生效，即新建一个终端后代理配置效果不存在，要想代理配置对所有终端生效，需要把命令写入powershell的配置文件中</p>
 <ol>
-<li>进入到<code>下载</code>或<code>Downloads</code>目录</li>
-<li>使用以下命令下载ccat源码归档压缩包<br> <code>wget https://github.com/jingweno/ccat/releases/download/v1.1.0/linux-amd64-1.1.0.tar.gz</code></li>
-<li>解压下载的压缩包<br> <code>tar xfz linux-amd64-1.1.0.tar.gz</code></li>
-<li>将ccat执行文件复制到系统$PATH中，这样在输入ccat时就可以直接使用<br> <code>sudo cp linux-amd64-1.1.0/ccat /usr/local/bin/</code></li>
-<li>给ccat命令添加可执行权限<br> <code>sudo chmod +x /usr/local/bin/ccat</code></li>
-<li>安装完成，输入<code>ccat &lt;文件名&gt;</code>就可以看到带语法高亮的文档输出</li>
+<li><p>在终端中输入命令查看系统配置文件的路径</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">echo $PROFILE<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>打开配置文件，若不存在则自己创建一个，在配置文件中添加代理配置</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$</span><span class="language-bash">Env:http_proxy=<span class="hljs-string">&quot;http://127.0.0.1:7890&quot;</span></span><br><span class="hljs-meta prompt_">$</span><span class="language-bash">Env:https_proxy=<span class="hljs-string">&quot;http://127.0.0.1:7890&quot;</span></span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>保存退出，新建一个终端输入命令测试代理，返回200的话说明系统配置设置成功了</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -I https://www.google.com<br></code></pre></td></tr></table></figure></li>
 </ol>
-<p>如果你想将系统默认的cat命令替换为ccat的话，可以采使用alias别名设置：</p>
-<ol>
-<li>打开系统配置文件<br> <code>sudo vim ~/.bashrc</code></li>
-<li>在最后一行输入<br> <code>alias cat=/usr/local/bin/ccat</code></li>
-<li>使.bashrc生效<br> <code>source ~/.bashrc</code></li>
-</ol>
-<p>这样输入<code>cat</code>命令时就默认使用<code>ccat</code>可执行文件了</p>
-<h2 id="2、less"><a href="#2、less" class="headerlink" title="2、less"></a>2、less</h2><ol>
-<li><p>安装source-highlight<br> <code>sudo apt-get install source-highlight</code></p>
-</li>
-<li><p>配置less<br> 打开<code>.bashrc</code>文件，加上以下配置<br> <code>export LESSOPEN=&quot;| /usr/share/source-highlight/src-hilite-lesspipe.sh %s&quot;</code><br> <code>export LESS=&quot; -R&quot;</code></p>
-</li>
-<li><p>如果想输出的内容带有行号的话，添加以下配置<br> <code>export LESS=&quot; -N -R&quot;</code></p>
-</li>
-<li><p>使配置生效<br> <code>source ~/.bashrc</code></p>
-</li>
-</ol>
+<h2 id="CMD配置"><a href="#CMD配置" class="headerlink" title="CMD配置"></a>CMD配置</h2><p>windows的命令提示符cmd使用以下命令配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">set HTTP_PROXY=http://127.0.0.1:7890<br>set HTTPS_PROXY=https://127.0.0.1:7890<br></code></pre></td></tr></table></figure>
+
+<p>通过curl命令测试代理</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl.exe -I http://www.google.com<br>curl.exe -I https://www.google.com<br></code></pre></td></tr></table></figure>
+
+<p>看到返回<code>HTTP/1.1 200 OK</code>代表配置成功</p>
+<p>还原命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">set HTTP_PROXY=<br>set HTTPS_PROXY=<br></code></pre></td></tr></table></figure>
+
+<h2 id="其他的方法"><a href="#其他的方法" class="headerlink" title="其他的方法"></a>其他的方法</h2><p>网上其他博客介绍的是这种方法，不过我使用这种方法后并没有生效，可能这种方式适用于旧版的powershell。以下的命令都要在管理员模式下进行。</p>
+<h3 id="查看代理"><a href="#查看代理" class="headerlink" title="查看代理"></a>查看代理</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">netsh winhttp show proxy<br></code></pre></td></tr></table></figure>
+
+<h3 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">netsh winhttp set proxy 127.0.0.1:7890<br></code></pre></td></tr></table></figure>
+
+<h3 id="取消代理"><a href="#取消代理" class="headerlink" title="取消代理"></a>取消代理</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">netsh winhttp reset proxy<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -355,7 +378,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/linux-config/" class="category-chain-item">Linux配置</a>
+  <a href="/categories/application/" class="category-chain-item">应用记录</a>
   
   
 
@@ -375,8 +398,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Linux cat以及less命令的语法高亮配置</div>
-      <div>http://jaoyoo.github.io/linux-config/2023/2/ccat_less/</div>
+      <div>powershell7设置代理</div>
+      <div>http://jaoyoo.github.io/application/2023/2/powershell_proxy/</div>
     </div>
     <div class="license-meta">
       
@@ -388,7 +411,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月20日</div>
+          <div>2023年2月25日</div>
         </div>
       
       
@@ -420,18 +443,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/application/2023/2/picgo_jsdelivr/" title="利用Github+PicGo+jsDelivr+Imagine创建免费的图床">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">利用Github+PicGo+jsDelivr+Imagine创建免费的图床</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/technology-notes/2023/2/markdownlint-rules/" title="Markdownlint规则">
-                        <span class="hidden-mobile">Markdownlint规则</span>
+                      <a href="/application/2023/2/picgo_jsdelivr/" title="利用Github+PicGo+jsDelivr+Imagine创建免费的图床">
+                        <span class="hidden-mobile">利用Github+PicGo+jsDelivr+Imagine创建免费的图床</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
